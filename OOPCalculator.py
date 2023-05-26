@@ -24,17 +24,11 @@ class Calculator:
 calculator = Calculator()
 
 while True:
-    print("Choose an operation:")
-    print("(+) Addition")
-    print("(-) Subtraction")
-    print("(*) Multiplication")
-    print("(/) Division")
-    print("(**) Power")
-    print("(%) Percentage")
+    print("Choose an operation (+ - * / % **)")
     operation = input("=")
 
-    num1 = float(input("Input first number: "))
-    num2 = float(input("Input second number: "))
+    num1 = int(input("Input first number: "))
+    num2 = int(input("Input second number: "))
 
     if operation == "+":
         result = calculator.add(num1, num2)
