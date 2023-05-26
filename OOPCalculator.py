@@ -19,10 +19,23 @@ class Calculator:
 
 calculator = Calculator()
 
-print(calculator.add(10,10))
-print(calculator.subtract(10,10))
-print(calculator.divide(10,10))
-print(calculator.multiply(10,10))
-print(calculator.add(0,0))
-print(calculator.multiply(20,20))
-print(calculator.divide(0,0))
+while True:
+    print("Choose an operation (+ - * /)")
+    operation = input("=")
+
+    num1 = int(input("Input first number: "))
+    num2 = int(input("Input second number: "))
+
+    if operation == "+":
+        result = calculator.add(num1, num2)
+    elif operation == "-":
+        result = calculator.subtract(num1, num2)
+    elif operation == "*":
+        result = calculator.multiply(num1, num2)
+    elif operation == "/":
+        result = calculator.divide(num1, num2)
+    else:
+        print("Invalid operation")
+        continue
+
+    print("=", result)
