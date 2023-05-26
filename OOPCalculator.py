@@ -4,6 +4,8 @@
 class Calculator:
     def __init__(self) -> None:
         pass
+    def power(self, a, b):
+        return a ** b
     def add(self, a, b):
         return a + b
     def subtract(self, a, b):
@@ -22,7 +24,7 @@ class Calculator:
 calculator = Calculator()
 
 while True:
-    print("Choose an operation (+ - * / %)")
+    print("Choose an operation (+ - * / % **)")
     operation = input("=")
 
     num1 = int(input("Input first number: "))
@@ -38,6 +40,8 @@ while True:
         result = calculator.divide(num1, num2)
     elif operation == "%":
         result = calculator.percentage(num1, num2)
+    elif operation == "**":
+        result = calculator.power(num1,num2)
     else:
         print("Invalid operation")
         continue
