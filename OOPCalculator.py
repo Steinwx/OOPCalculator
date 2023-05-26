@@ -11,7 +11,11 @@ class Calculator:
     def multiply(self, a, b):
         return a * b
     def divide(self, a, b):
-        return a / b
+        if b != 0:
+            return a / b
+        else:
+            return "Math ERROR"
+
 
 calculator = Calculator()
 
