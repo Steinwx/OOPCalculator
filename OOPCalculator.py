@@ -15,12 +15,14 @@ class Calculator:
             return a / b
         else:
             return "Math ERROR"
+    def percentage(self, a, b):
+        return (a * b) / 100
 
 
 calculator = Calculator()
 
 while True:
-    print("Choose an operation (+ - * /)")
+    print("Choose an operation (+ - * / %)")
     operation = input("=")
 
     num1 = int(input("Input first number: "))
@@ -34,6 +36,8 @@ while True:
         result = calculator.multiply(num1, num2)
     elif operation == "/":
         result = calculator.divide(num1, num2)
+    elif operation == "%":
+        result = calculator.percentage(num1, num2)
     else:
         print("Invalid operation")
         continue
