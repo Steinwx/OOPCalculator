@@ -10,7 +10,6 @@ while True:
     print("(/) Division")
     print("(**) Power")
     print("(%) Percentage")
-    print("(gcf) Greatest Common Factor")
     operation = input("=")
 
     num1 = float(input("Input first number: "))
