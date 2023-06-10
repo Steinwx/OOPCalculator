@@ -1,6 +1,6 @@
-from calculator import Calculator
+from inheritance_calculator import InheritanceCalculator
 
-calculator = Calculator()
+calculator=InheritanceCalculator()
 
 while True:
     print("Choose an operation:")
@@ -8,7 +8,9 @@ while True:
     print("(-) Subtraction")
     print("(*) Multiplication")
     print("(/) Division")
+    print("(**) Power")
     print("(%) Percentage")
+    print("(gcf) Greatest Common Factor")
     operation = input("=")
 
     num1 = float(input("Input first number: "))
@@ -24,6 +26,8 @@ while True:
         result = calculator.divide(num1, num2)
     elif operation == "%":
         result = calculator.percentage(num1, num2)
+    elif operation == "**":
+        result = calculator.power(num1,num2)
     else:
         print("Invalid operation")
         continue
